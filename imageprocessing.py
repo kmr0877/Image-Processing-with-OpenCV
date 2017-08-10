@@ -18,25 +18,31 @@
 import cv2
 import os
 import sys
-import glob
-import math
-import time
+import numpy as np
+import sys
 
+def removeBorder(img):
+    return img[30:len(img)-20 , 30 : len(img[0]) - 20]
 
-sys.setrecursionlimit(5000)
-    
-isShowImg = 0
-path = 'data/'
-#for infile in glob.glob(os.path.join(path,'*.jpg')):
-#    imagefile = infile
-for num in range(70,140):
-    imagefile = path + "v3_" + str(num) + ".jpg"
-    infile = imagefile
-    print "----read image file----"
-    print infile
-    outputFileName = os.path.basename(imagefile)
-    outimg = "outimg/_"+outputFileName
-    a = cv2.LoadImage(outimg)
-    cv2.ShowImage("Tracking"+ str(num),a)
-    time.sleep(0.2)
-    
+def reconstruct(img):
+    img2 = np.zeros((len(img) / 3 , len(img[0]) , 3), np.uint8)
+    for i in range(len(img2)):
+        for j in range(len(img2[0])):
+            img2[i][j][0] = img[i + (2 * len(img2))][j]
+            img2[i][j][1] = img[i + len(img2) + 4][j]
+            img2[i][j][2] = img[i + 4][j]
+    return img2
+
+if len(sys.argv) < 2:
+    print("Not Enough Argument")
+    sys.exit(0)
+
+img = cv2.imread(sys.argv[1],0)
+while True:
+    img2 = reconstruct(img)
+    img2 = removeBorder(img2)
+    cv2.imshow('Processed Image' ,img2)
+    k = cv2.waitKey(0)
+    if k == ord('q') or k == ord('Q'):
+        break
+cv2.destroyAllWindows()
