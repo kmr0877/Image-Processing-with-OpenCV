@@ -24,4 +24,7 @@ for i in range(len(img)):
     for j in range(len(img2[0])):
         img2[k][j] = img[i][j][2]
     k += 1
+img2 = cv2.rectangle(img2,(0,0),(len(img[0]),len(img)),(0,0,0),30)
+img2 = cv2.rectangle(img2,(0,len(img)),(len(img[0]),len(img)*2),(0,0,0),30)
+img2 = cv2.rectangle(img2,(0,len(img)*2),(len(img[0]),len(img)*3),(0,0,0),30)
 cv2.imwrite('con_'+sys.argv[1],img2)
