@@ -4,4 +4,4 @@ The following commands allows the user to test the implementation.
 python imageprocessing.py IMAGE_FILE_NAME
 Will output the images .
 Sample Interaction :
-python imageprocessing.py stones.jpg 
+python imageprocessing.py stones.jpg will produce the following images
