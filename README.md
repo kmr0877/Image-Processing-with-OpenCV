@@ -19,6 +19,9 @@ Try  to  improve  the  visual  quality  of  the  results  of  the  basic  algori
 ## _Implementation and Design_ : 
 The entire implementation is implemented using python programming language and works for versions 2.7+ which also requires opencv and numpy libraries installed.
 
+# Software
+Download OpenCV and read guided tutorial: http://opencv.org/
+
 ## _Format for Testing_ : 
 The following commands allows the user to test the implementation.
 # python imageprocessing.py IMAGE_FILE_NAME
