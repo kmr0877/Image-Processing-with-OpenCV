@@ -13,6 +13,8 @@ A  simple  way  to  perform  the  alignment  is  by  searching  through  all  po
 
 # TASK_2
 Searching  through  all  offsets  can  become  computationally  expensive  for  large  resolution images. To speed up the search procedure you can use a so - called image pyramid. An image pyramid  is  essentially  the  image  at  multiple  scales,  with scales  varying  by  a  factor  of  two. Alignment  can  then  be  done  sequentially,  starting  with  the  highest  level  and  incrementally updating your estimates as you go down the pyramid. 
+# TASK_3
+Try  to  improve  the  visual  quality  of  the  results  of  the  basic  algorithm.  Some  possibilities include colour and contrast adjustments, using a more sophisticated alignment procedure and automatically removing borders.One possible method I implemented is mean filter to improvise the obtained image in task_1 and task_2.Several other techniques availbe and can be used to enhance the quality of the image.
 
 ## _Implementation and Design_ : 
 The entire implementation is implemented using python programming language and works for versions 2.7+ which also requires opencv and numpy libraries installed.
