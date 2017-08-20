@@ -6,10 +6,13 @@ the three images using colored light it was then possible to recover the origina
 emigration following the revolution of 1917 and they were eventually purchased and digitizedby the US Library of Congress. 
 The  objective  of  this  task  is  to  produce  high  quality  colour  reconstructions  from Prokudin-Gorsky's negatives using simple image processing techniques. 
 
-# TASk_1
+# TASK_1
 A program that takes any one of these files as an input and produces a corresponding colour image as output. To do this you should divide the original image into three parts and then align the second and third channels to the first, displaying the 
 resulting offsets for each channel. 
 A  simple  way  to  perform  the  alignment  is  by  searching  through  all  possible  offsets  in  some suitable  range  (e.g.  20  pixels  for  low  resolution  images)  and  computing  for  each  a  score measuring the quality of the match. Three suitable metrics include sum of squared differences (SSD), sum of absolute differences (SAD) and the normalizedcross correlation (NCC). 
+
+# TASK_2
+Searching  through  all  offsets  can  become  computationally  expensive  for  large  resolution images. To speed up the search procedure you can use a so - called image pyramid. An image pyramid  is  essentially  the  image  at  multiple  scales,  with scales  varying  by  a  factor  of  two. Alignment  can  then  be  done  sequentially,  starting  with  the  highest  level  and  incrementally updating your estimates as you go down the pyramid. 
 
 ## _Implementation and Design_ : 
 The entire implementation is implemented using python programming language and works for versions 2.7+ which also requires opencv and numpy libraries installed.
