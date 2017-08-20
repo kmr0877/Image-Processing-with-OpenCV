@@ -1,3 +1,16 @@
+## Aims and Objective
+Sergei  Prokudin Gorsky(1863-1944)  was  a  Russian  photographer  and  chemist  whose 
+collection of colour photographs is the oldest surviving to this date. 
+He used a camera that took a sequence of three black and white exposures using blue, red and green filters. By projecting 
+the three images using colored light it was then possible to recover the original colours. See herefor more details. At the beginning of the 20th century, Prokudin-Gorsky embarked on a many year project to systematically document the life of the Russian Empire by means of the new  colour  imaging  technology.  He  then  took  many  of  the  resulting  negatives  with  him  on 
+emigration following the revolution of 1917 and they were eventually purchased and digitizedby the US Library of Congress. 
+The  objective  of  this  task  is  to  produce  high  quality  colour  reconstructions  from Prokudin-Gorsky's negatives using simple image processing techniques. 
+
+# TASk_1
+A program that takes any one of these files as an input and produces a corresponding colour image as output. To do this you should divide the original image into three parts and then align the second and third channels to the first, displaying the 
+resulting offsets for each channel. 
+A  simple  way  to  perform  the  alignment  is  by  searching  through  all  possible  offsets  in  some suitable  range  (e.g.  20  pixels  for  low  resolution  images)  and  computing  for  each  a  score measuring the quality of the match. Three suitable metrics include sum of squared differences (SSD), sum of absolute differences (SAD) and the normalizedcross correlation (NCC). 
+
 ## _Implementation and Design_ : 
 The entire implementation is implemented using python programming language and works for versions 2.7+ which also requires opencv and numpy libraries installed.
 
