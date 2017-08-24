@@ -37,6 +37,5 @@ python imageprocessing.py devillers.jpg
 
 <img width="612" alt="screen shot 2017-08-24 at 11 50 20 am" src="https://user-images.githubusercontent.com/26761582/29645801-0dbef004-88c3-11e7-9806-a20932af4714.png">
 
-## Image after processing using pyramids
 
 
