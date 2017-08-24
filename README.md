@@ -31,6 +31,7 @@ python imageprocessing.py devillers.jpg
 
 
 ## Sample Image before Processing
+![stones](https://user-images.githubusercontent.com/26761582/29645709-a9f7cb36-88c2-11e7-888d-1d191b60e43a.jpg)
 
 ## Image after processing pixel by pixel
 
